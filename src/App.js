@@ -1,18 +1,10 @@
 import React from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 import './styles/App.css';
 
 const App = () => {
-  const burger__button = document.querySelector('.header__button');
-
-  function onClickMenu() {
-    document.querySelector(".header__line").classList.toggle("active");
-    document.querySelector(".header__menu").classList.toggle("active");
-  }
-
-  burger__button.onclick = onClickMenu;
 
   return (
     <div className="wrapper">

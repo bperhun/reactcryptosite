@@ -1,0 +1,117 @@
+.footer {
+    background-color: #02091a;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    color: white;
+  }
+  
+  .footer__row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 2% 3% 2%;
+  }
+
+  .footer__bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 2% 3% 2%;
+  }
+  
+  .footer__email {
+    width: 40%;
+    text-decoration: none;
+  }
+  
+  .footer__email > p > a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer__descr {
+    width: 100%;
+  }
+  
+  .footer__icons {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .footer__icons > div a > img {
+    max-width: 33%;
+  }
+
+  @media only screen and (min-device-width: 250px) and (max-device-width: 545px) {   
+   
+    .footer__email {
+      width: 58%;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    
+    .footer__descr {
+      font-size: 14px;
+    }
+    
+    .footer__icons {
+      width: 38%;
+    }
+    
+    .footer__icons > div a > img {
+      max-width: 60%;
+    }
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .footer__email {
+      width: 58%;
+      font-size: 25px;
+      text-decoration: none;
+    }
+    
+    .footer__descr {
+      font-size: 20px;
+      margin-bottom: 2%;
+    }
+    
+    .footer__icons {
+      width: 36%;
+    }
+    
+    .footer__icons > div a > img {
+      max-width: 60%;
+    }
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 879px) {
+    .footer__email {
+      width: 58%;
+      font-size: 25px;
+      text-decoration: none;
+    }
+    
+    .footer__descr {
+      font-size: 20px;
+      margin-bottom: 2%;
+    }
+    
+    .footer__icons {
+      width: 36%;
+    }
+    
+    .footer__icons > div a > img {
+      max-width: 60%;
+    }
+  }

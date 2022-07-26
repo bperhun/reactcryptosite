@@ -1,0 +1,85 @@
+
+  .noRisk__post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #515151;
+    font-family: "Open Sans";
+  }
+  
+  .noRisk__post > h2 {
+    z-index: 1;
+    max-width: 505px;
+    font-size: 31px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .noRisk__post > p {
+    z-index: 1;
+    max-width: 920px;
+    opacity: 0.91;
+    margin: 1% 0 1% 0;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-align: justify;
+  }
+  
+  .noRisk__post > a {
+    max-width: 220px;
+    border: 1px solid #515151;
+    padding: 19px 23px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    opacity: 0.91;
+    color: #515151;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  @media only screen and (min-device-width: 250px) and (max-device-width: 545px) {
+    .noRisk__post > h2 {
+      font-size: 29px;
+    }
+    
+    .noRisk__post > p {
+      margin: 1% 3% 1% 3%;
+      font-size: 17px;
+      text-align: justify;
+    }
+    .noRisk__post > a {
+      margin-bottom: 2%;
+    }
+    
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .noRisk__post > a {
+      margin-bottom: 2%;
+    }
+
+    .noRisk__post > p {
+      margin: 1% 4% 1% 4%;
+      text-align: justify;
+    }
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 879px) {
+    .noRisk__post > p {
+      margin: 1% 2% 1% 2%;
+      font-size: 18px;
+      text-align: justify;
+    }
+    .noRisk__post > a {
+      margin-bottom: 2%;
+    }
+  }
