@@ -7,22 +7,27 @@
   
   .header__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   
   .header__logo > a > img {
-    max-width: 40%;
+    max-width: 60%;
     margin: 23px 0 23px 5%;
   }
   
   .header__logo > a {
     cursor: pointer;
   }
+
+  .header__logo{
+    width: 20%;
+  }
   
   .header__menu {
     display: flex;
     align-items: center;
+    width: 50%;
   }
   
   .header__items {
@@ -47,6 +52,10 @@
     opacity: 0;
   }
   
+  .header__telegram{
+    width: 15%;
+  }
+
   .header__telegram > a > img {
     max-width: 30%;
   }
@@ -54,6 +63,8 @@
   .header__utc {
     margin-right: 5%;
     color: white;
+    font-family: "Open Sans";
+    width: 15%;
   }
 
   @media only screen and (min-device-width: 250px) and (max-device-width: 545px) {

@@ -13,7 +13,6 @@ const Main = () => {
             <MainTelegram />
             <div className="main-crypto">
             </div>
-            <NoRiskSection />
             <MainTraders />
             <MainProject />
         </main >

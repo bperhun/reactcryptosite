@@ -3,6 +3,7 @@
   }
   
   .noRisk__title {
+    margin-top: 5%;
     background-blend-mode: multiply;
     background: url(/public/img/no-risk-bg.jpg);
     background-repeat: no-repeat;

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../PostNoRisk/PostNoRisk.module.css";
 
-const PostNoRisk = () => {
+const PostNoRisk = (props) => {
 
     return (
         <div className={classes.noRisk__post}>

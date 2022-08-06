@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className={clasess.footer__row}>
                         <div className={clasess.footer__top}>
                             <div className={clasess.footer__email}>
-                                <p>Почта: <a href="mailto:test@crypro-grizzle.com">test@crypro-grizzle.com</a></p>
+                                <p>Почта: <a href="mailto:test@crypro-grizzle.tech">test@crypro-grizzle.tech</a></p>
                             </div>
                             <div className={`${clasess.footer__icons} ${clasess.icon}`}>
                                 <div><a><img src="/img/3536661.png" alt="Логотип телеграмма" /></a></div>
