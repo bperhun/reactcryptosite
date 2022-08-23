@@ -87,9 +87,7 @@ const MainScreen = () => {
                     </svg>
                 </div>
                 <div className={classes.mainScreen__text}>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam necessitatibus exercitationem ad
-                        accusantium ut eius quaerat quia molestiae quis provident excepturi aliquid cupiditate deserunt, dolor
-                        iste quisquam soluta, est suscipit.</p>
+                    <p>Крипто Гризли. Универсальное решение для всех, кто увлекается криптовалютой и хочет на ней заработать. Не имеет значения, есть ли у вас 200$, 10$ или 0$ - каждый найдет что-то полезное для себя. Хотите зарабатывать без риска или готовы немного вложить в эту сферу? Решение есть для всех.</p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import classes from "../MainTraders/MainTraders.module.css";
 
 const MainTraders = () => {
@@ -12,12 +13,8 @@ const MainTraders = () => {
                             <div className={classes.mainTraders__circle}></div>
                             <div className={classes.mainTraders__circle}></div>
                             <h2>Для новичков</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sapiente, non quos eligendi
-                                impedit
-                                veniam excepturi assumenda maxime quod qui obcaecati deleniti alias, ullam earum enim repellat
-                                explicabo
-                                voluptatum esse!</p>
-                            <a href="#">Смотреть</a>
+                            <p>Еще недостаточно опытны в криптовалюте и не хотите рисковать деньгами? Хотите получить небольшую прибыль без вложений? Тогда этот раздел вам подходит. Здесь будут публиковаться актуальные и завершенные проекты, где вы можете заработать от 1 до 20$, но которые не требуют каких-то навыков или вложений.</p>
+                            <NavLink to='/forNewTraders'>Смотреть</NavLink>
                         </div>
                     </div>
                     <div className={classes.mainTraders__right}>

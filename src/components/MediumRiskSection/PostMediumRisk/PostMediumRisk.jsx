@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "../PostNoRisk/PostNoRisk.module.css";
+import classes from "../PostMediumRisk/PostMediumRisk.module.css";
 
-const PostNoRisk = (props) => {
+const PostMediumRisk = (props) => {
 
 
 
@@ -28,4 +28,4 @@ const PostNoRisk = (props) => {
     );
 }
 
-export default PostNoRisk; 
+export default PostMediumRisk; 

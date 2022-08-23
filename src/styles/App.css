@@ -126,6 +126,10 @@ h6 {
   margin: 0 auto;
 }
 
+p{
+  text-indent: 3%;
+}
+
 .s0 {
   fill: none;
   stroke: wheat;

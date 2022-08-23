@@ -12,10 +12,8 @@ const MainTelegram = () => {
                     </div>
                     <div className={classes.mainTelegram__right}>
                         <h2>Наш телеграм</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sapiente, non quos eligendi impedit
-                            veniam excepturi assumenda maxime quod qui obcaecati deleniti alias, ullam earum enim repellat explicabo
-                            voluptatum esse!</p>
-                        <a href="#">Перейти в телеграм</a>
+                        <p>Узнавайте о самых актуальных проектах и раздачах с детальным описанием в нашем телеграм-канале. Быстрота, качество и уверенность в прибыли.</p>
+                        <a href="https://t.me/+Wg2w6nlnbM9hYWY6" target="_blank">Перейти в телеграм</a>
                     </div>
                 </div>
             </div>

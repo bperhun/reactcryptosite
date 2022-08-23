@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import classes from "../MainProject/MainProject.module.css";
 
 const MainProject = () => {
@@ -14,13 +15,9 @@ const MainProject = () => {
                         <div className={classes.mainProject__card}>
                             <div className={classes.mainProject__circle}></div>
                             <div className={classes.mainProject__circle}></div>
-                            <h2>наши проекты</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sapiente, non quos eligendi
-                                impedit
-                                veniam excepturi assumenda maxime quod qui obcaecati deleniti alias, ullam earum enim repellat
-                                explicabo
-                                voluptatum esse!</p>
-                            <a href="#">Смотреть</a>
+                            <h2>Актуальный проект</h2>
+                            <p>Самый актуальный текущий проект, который по нашему мнению точно принесет вам прибыль. Не теряйте время, забирайте деньги.</p>
+                            <NavLink to='/noRiskProject'>Смотреть</NavLink>
                         </div>
                     </div>
                 </div>

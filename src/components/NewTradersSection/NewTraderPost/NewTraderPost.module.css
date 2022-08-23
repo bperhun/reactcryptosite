@@ -1,0 +1,148 @@
+.newTrader__post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2% 2% 2%;
+    color: #515151;
+    font-family: "Open Sans";
+  }
+
+.newTrader__block{
+  display: flex;
+  justify-content: space-around;
+    width: 100%;
+    border: 1px solid #02091a;
+    background-color: rgba(2, 9, 26, 0.9);
+    padding: 1% 30%;
+    cursor: pointer;
+  }
+
+  .newTrader__header{
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 29px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
+
+  .newTrader__header::after{
+    content: "▼";
+    color: whitesmoke;
+  }
+
+  .newTrader__header.active::after{
+    content: "▲";
+    color: whitesmoke;
+  }
+
+  .newTrader__itemsMain{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .newTrader__itemsMain.active{
+    display: block;
+    animation-name: block_info;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+
+  .newTrader__itemsMain img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+  }
+  
+  .newTrader__itemsMain  p {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    opacity: 0.91;
+    margin: 1% 0 2% 0;
+    font-size: 19px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-align: justify;
+  }
+
+  @media only screen and (min-device-width: 250px) and (max-device-width: 545px) {
+    .newTrader__block{
+      width: 100%;
+    }
+    .newTrader__header{
+      font-size: 20px;
+    }
+    .newTrader__itemsMain.active{
+      animation-name: block_info_mobile;
+    }
+    .newTrader__header::after{
+      content: "▼";
+    }
+  
+    .newTrader__header.active::after{
+      content: "▲";
+    }
+    .newTrader__itemsMain img {
+      width: 100%;
+    }
+  
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    .newTrader__block{
+      width: 100%;
+    }
+    .newTrader__header::after{
+      content: "▼";
+    }
+  
+    .newTrader__header.active::after{
+      content: "▲";
+    }
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 879px) {
+    .newTrader__header{
+      font-size: 28px;
+    }
+    .newTrader__header::after{
+      content: "▼";
+    }
+  
+    .newTrader__header.active::after{
+      content: "▲";
+    }
+  }
+
+  @keyframes block_info {
+    0% {
+      opacity: 0;
+      margin-left: -100%;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+    @keyframes block_info_mobile {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+  }
+  
