@@ -11,14 +11,12 @@ const MainTraders = () => {
                     <div className={classes.mainTraders__left}>
                         <div className={classes.mainTraders__card}>
                             <div className={classes.mainTraders__circle}></div>
-                            <div className={classes.mainTraders__circle}></div>
-                            <h2>Для новичков</h2>
-                            <p>Еще недостаточно опытны в криптовалюте и не хотите рисковать деньгами? Хотите получить небольшую прибыль без вложений? Тогда этот раздел вам подходит. Здесь будут публиковаться актуальные и завершенные проекты, где вы можете заработать от 1 до 20$, но которые не требуют каких-то навыков или вложений.</p>
-                            <NavLink to='/forNewTraders'>Смотреть</NavLink>
+                            <NavLink to='/forNewTraders'>Для новичков</NavLink>
+                            <p>Еще недостаточно опытны в криптовалюте и не хотите рисковать деньгами?<br /><br /> Хотите получить небольшую прибыль без вложений?<br /><br /> Тогда этот раздел вам подходит.<br /><br /> Здесь будут публиковаться актуальные и завершенные проекты, где вы можете заработать от 1 до 20$,<br /><br /> но которые не требуют каких-то навыков или вложений.</p>
                         </div>
                     </div>
                     <div className={classes.mainTraders__right}>
-                        <img src="/img/trading.jpg" alt="Картинка трейдинга" />
+                        <img src="/img/business.svg" alt="Картинка трейдинга" />
                     </div>
                 </div>
             </div>

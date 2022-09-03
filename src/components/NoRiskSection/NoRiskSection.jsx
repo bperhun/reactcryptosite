@@ -12,13 +12,16 @@ const NoRiskSection = (props) => {
 
     return (
         <div className={classes.noRisk}>
-            <div className={classes.noRisk__title}>
-                <h1>Проекты без рисков</h1>
-                <p>Здесь указаны текущие и завершенные проекты, которые не требуют вложений для входа или же требуются минимальные вложения, которые вы не потеряете. Подходит для всех, у кого есть хотя бы 100-150$, кто готов их вкладывать, но не готов заходить на проекты с повышенным риском.</p>
-            </div>
-            <div></div>
             <div className="container">
+                <div className={classes.noRisk__title}>
+                    <span className={classes.noRisk__circle}>
+                        <h1>Проекты без рисков</h1>
+                    </span>
+                </div>
                 <div className={classes.noRisk__posts}>
+                    <p>Здесь указаны текущие и завершенные проекты, которые не требуют вложений для входа или же требуются минимальные вложения, которые вы не потеряете. Подходит для всех, у кого есть хотя бы 100-150$, кто готов их вкладывать, но не готов заходить на проекты с повышенным риском.</p>
+                    <span className={classes.noRisk__circle}></span>
+                    <span className={classes.noRisk__circle}></span>
                     {postNoRiskElement}
 
                 </div>

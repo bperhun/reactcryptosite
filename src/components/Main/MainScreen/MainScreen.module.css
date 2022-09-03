@@ -1,10 +1,19 @@
-  
+@keyframes move-up {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move-down {
+  to {
+    transform: translateY(20px);
+  }
+}
   .mainScreen {
-    background: url(/public/img/keyboard-5017973.jpg) no-repeat;
-    background-size: cover;
-    background-color: black;
-    background-position: center;
-    background-attachment: fixed;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     padding-bottom: 18%;
     display: flex;
     flex-direction: column;
@@ -13,153 +22,211 @@
     text-align: center;
     height: 100vh;
   }
+
+  .mainScreen__circle:nth-child(1){
+    position: absolute;
+    border-radius: 50%;
+    border: 9px solid #19B8ED;
+    width: 160px;
+    height: 160px;
+    background: #19B8ED;
+    margin-left: 42%;
+    margin-top: 4%;
+    filter: blur(9px);
+    animation: move-up 2s ease-in infinite alternate-reverse;
+  }
+
+  .mainScreen__circle:nth-child(2){
+    position: absolute;
+    border-radius: 50%;
+    border: 9px solid #1472FF;
+    width: 140px;
+    height: 140px;
+    background: #1472FF;
+    margin-left: -59%;
+    margin-top: 44%;
+    filter: blur(10px);
+    animation: move-down 3s ease-in infinite alternate-reverse;
+  }
+
+  .mainScreen__circle:nth-child(3){
+    position: absolute;
+    border-radius: 50%;
+    border: 9px solid #19B8ED;
+    width: 200px;
+    height: 200px;
+    background: #19B8ED;
+    margin-left: -10%;
+    margin-top: 56%;
+    filter: blur(7px);
+    animation: move-up 2.5s ease-in infinite alternate-reverse;
+  }
+
+  .mainScreen__title {
+    position: absolute;
+    width: 44%;
+    height: auto;
+    margin-left: 28%;
+    margin-top: -3%;
+    background-color: #021B41;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 1px 7px 9px rgba(2, 27, 65, 1);
+    -moz-box-shadow: 1px 1px 7px 9px rgba(2, 27, 65, 1);
+    box-shadow: 1px 1px 7px 9px rgba(2, 27, 65, 0.8);
+  }
   
   .mainScreen__title > h1 {
-    color: #ffffff;
+    color: rgba(140, 252, 252, 1);
     font-family: "Bebas Neue";
-    margin: 0 8% 10% 8%;
-    font-size: 49px;
+    max-width: 240px;
+    margin: 2% auto;
+    font-size: 44px;
     font-weight: 400;
-    line-height: 77px;
-    animation-name: title_text;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+    line-height: 47px;
   }
   
-  .mainScreen__title > h1:after {
-    display: block;
-    position: absolute;
-    margin-left: 35%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #ffffff;
-    content: "";
-    animation-name: title;
-    animation-duration: 4s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
+  .mainScreen__img img{
+    margin: 0 auto;
+    width: 100%;
   }
-  
-  .mainScreen__text > p {
+  .mainScreen__text {
     position: relative;
-    background-color: rgba(12, 12, 12, 0.85);
-    border-radius: 15px;
+    width: 50%;
+    height: 55%;
+    background-color: rgba(0, 88, 168,0.5);
+    border-radius: 20px;
+    margin-top: 6%;
+  }
+
+  .mainScreen__text > p {
+    position: absolute;
+    background-color: rgba(0, 88, 168, 0.75);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
     z-index: 50;
-    color: #ffffff;
+    color: rgba(167, 195, 255, 1);
     font-family: "Open Sans";
-    margin: 0 5% 0 5%;
-    font-size: 25px;
+    margin: -3% 5% 0 3%;
+    padding: 6%;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 350;
+    font-weight: 400;
     letter-spacing: normal;
     line-height: normal;
-    animation-name: text;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes title_text {
-    0% {
-      opacity: 0;
-      margin-left: -100%;
-    }
-    100% {
-      opacity: 1;
-    }
+    text-align: justify;
   }
   
-  @keyframes text {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
-  @keyframes title {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 30%;
-    }
-  }
 
   @media only screen and (min-device-width: 250px) and (max-device-width: 545px) {
-    .mainScreen {
-      background-blend-mode: multiply;
-      background: url(/public/img/bg-mobile.jpeg);
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: top;
-      background-attachment: fixed;
-      background-color: rgba(51, 51, 51, 0.95);
+    .mainScreen__title {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: -20%;
+      margin-bottom: 25%;
+      background-color: rgba(0, 54, 103, 1);
+    }
+    .mainScreen__img img{
+      display: none;
     }
     .mainScreen__title > h1 {
-      color: #ffffff;
+      color: rgba(140, 252, 252, 1);
       font-family: "Bebas Neue";
-      margin: 0 8% 10% 8%;
-      font-size: 43px;
+      margin: 0 auto;
+      padding-top: 4%;
+      padding-bottom: 3%;
+      font-size: 35px;
       font-weight: 400;
-      line-height: 77px;
+      line-height: 47px;
       animation: none;
     }
-    .mainScreen__text > P {
+    .mainScreen__text {
+      margin: 0 auto;
+      width: 90%;
+      height: auto;
+      background-color: rgba(20, 114, 255, 0);
+    }
+    .mainScreen__text > p {
       position: relative;
+      margin: 0 auto;
+      background-color:  rgba(20, 114, 255, 0.44);
       z-index: 100;
-      color: #ffffff;
-      font-family: "Bebas Neue";
-      margin: 0 5% 0 5%;
+      color: rgba(103, 217, 255, 1);
+      font-family: "Open Sans";
       font-size: 18px;
       font-style: normal;
-      font-weight: 350;
-      letter-spacing: normal;
-      line-height: normal;
-      animation-name: none;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .mainScreen__circle:nth-child(1){
+      z-index: 101;
+      position: absolute;
+      border-radius: 50%;
+      border: 9px solid #19B8ED;
+      width: 120px;
+      height: 120px;
+      background: #19B8ED;
+      margin-left: -60%;
+      margin-top: 3%;
+      filter: blur(9px);
+      animation: move-up 2s ease-in infinite alternate-reverse;
+    }
+  
+    .mainScreen__circle:nth-child(2){
+      z-index: 102;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid white;
+      width: 100px;
+      height: 100px;
+      background: rgba(20, 114, 255, 0);
+      margin-left: -62%;
+      margin-top: 14%;
+      filter: blur(1px);
+      animation: move-up 2.1s ease-in infinite alternate-reverse;
+    }
+  
+    .mainScreen__circle:nth-child(3){
+      z-index: 102;
+      position: absolute;
+      border-radius: 50%;
+      border: 9px solid rgba(134, 255, 247, 1);
+      width: 120px;
+      height: 120px;
+      background: rgba(134, 255, 247, 1);
+      margin-left: 25%;
+      margin-top: 125%;
+      filter: blur(9px);
+      animation: move-down 2.5s ease-in infinite alternate-reverse;
     }
   }
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
-    .mainScreen {
-      padding-top: -40%;
-    }
-    .mainScreen__title > h1 {
-      margin-top: -160px;
-      font-size: 39px;
-    }
-    .mainScreen__text > P {
-      font-size: 20px;
-      animation: none;
+    
+    .mainScreen__text {
+      position: relative;
+      width: 50%;
+      height: 90%;
     }
   }
 
   @media only screen and (orientation: landscape) and (max-width: 879px) {
-    .mainScreen__title > h1 {
-      color: #ffffff;
-      font-family: "Bebas Neue";
-      margin: 30% 8% 10% 8%;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 77px;
-      animation: none;
+    .mainScreen {
+      margin-top: 45%;
     }
+
+    .mainScreen__title > h1 {
+      font-size: 34px;
+    }
+ 
+    .mainScreen__text {
+      height: 70%;
+    }
+  
     .mainScreen__text > p {
-      position: relative;
-      background-color: rgba(51, 51, 51, 0.85);
-      border-radius: 15px;
-      z-index: 100;
-      color: #ffffff;
-      font-family: "Bebas Neue";
-      margin: 0 5% 0 5%;
-      padding: 3%;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 350;
-      letter-spacing: normal;
-      line-height: normal;
-      animation-name: none;
+      font-size: 19px;
     }
   }

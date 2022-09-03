@@ -12,12 +12,14 @@ const PostMediumRisk = (props) => {
                 <div>
                     <img src={props.src} alt="test" />
                 </div>
-                <div>
-                    <p>{props.p1}</p>
-                    <p>{props.p2}</p>
-                    <p>{props.p3}</p>
-                    <p>{props.p4}</p>
-                    <p>{props.p5}</p>
+                <div className={classes.noRisk__bg}>
+                    <div className={classes.noRisk__p}>
+                        <p>{props.p1}</p>
+                        <p>{props.p2}</p>
+                        <p>{props.p3}</p>
+                        <p>{props.p4}</p>
+                        <p>{props.p5}</p>
+                    </div>
                 </div>
             </div>
             <div className={classes.noRisk__itemsBottom}>

@@ -25,15 +25,19 @@ const NewTradersSection = (props) => {
 
     return (
         <div className={classes.noRisk}>
-            <div className={classes.noRisk__title}>
-                <h1>Для новичков</h1>
-                <p>Еще недостаточно опытны в криптовалюте и не хотите рисковать деньгами? Хотите получить небольшую прибыль без вложений? Тогда этот раздел вам подходит. Здесь будут публиковаться актуальные и завершенные проекты, где вы можете заработать от 1 до 20$, но которые не требуют каких-то навыков или вложений.</p>
-            </div>
             <div className="container">
+                <div className={classes.noRisk__title}>
+                    <span className={classes.noRisk__circle}>
+                        <h1>Для новичков</h1>
+                    </span>
+                </div>
                 <div className={classes.noRisk__posts}>
+                    <p>Еще недостаточно опытны в криптовалюте и не хотите рисковать деньгами? Хотите получить небольшую прибыль без вложений? Тогда этот раздел вам подходит. Здесь будут публиковаться актуальные и завершенные проекты, где вы можете заработать от 1 до 20$, но которые не требуют каких-то навыков или вложений.</p>
+                    <span className={classes.noRisk__circle}></span>
+                    <span className={classes.noRisk__circle}></span>
                     {postNewTraderElement}
-                    <textarea ref={headerButtin} onChange={updateHeader} value={props.state.postText} />
-                    <input type='submit' onClick={addHeader}></input>
+                    {/* <textarea ref={headerButtin} onChange={updateHeader} value={props.state.postText} />
+                    <input type='submit' onClick={addHeader}></input> */}
                 </div>
             </div>
         </div>

@@ -9,15 +9,12 @@ const MainProject = () => {
             <div className="container">
                 <div className={classes.mainProject__row}>
                     <div className={classes.mainProject__left}>
-                        <img src="/img/crypro_projects.png" alt="Картинка биткоина" />
+
                     </div>
                     <div className={classes.mainProject__right}>
                         <div className={classes.mainProject__card}>
-                            <div className={classes.mainProject__circle}></div>
-                            <div className={classes.mainProject__circle}></div>
-                            <h2>Актуальный проект</h2>
-                            <p>Самый актуальный текущий проект, который по нашему мнению точно принесет вам прибыль. Не теряйте время, забирайте деньги.</p>
-                            <NavLink to='/noRiskProject'>Смотреть</NavLink>
+                            <NavLink to='/noRiskProject'>Актуальный проект</NavLink>
+                            <p>Самый актуальный текущий проект, который по нашему мнению точно принесет вам прибыль.<br /><br /> Не теряйте время, забирайте деньги.</p>
                         </div>
                     </div>
                 </div>

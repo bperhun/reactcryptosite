@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
@@ -114,6 +115,11 @@ h6 {
 }
 
 /*--------------------*/
+body {
+  background: url(/public/img/background-g3.svg), #020a1c;
+  background-size: 100%;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -122,45 +128,9 @@ h6 {
 }
 
 .container {
+  position: relative;
   max-width: 1028px;
   margin: 0 auto;
-}
-
-p{
-  text-indent: 3%;
-}
-
-.s0 {
-  fill: none;
-  stroke: wheat;
-  stroke-width: 1;
-  opacity: 0.1;
-  width: 100%;
-}
-
-.core {
-  fill: url("#img1");
-  max-width: 100%;
-}
-
-.orbita1 {
-  fill: url("#img2");
-}
-
-.orbita2 {
-  fill: url("#img3");
-}
-
-.orbita3 {
-  fill: url("#img4");
-}
-
-.orbita4 {
-  fill: url("#img5");
-}
-
-.orbita5 {
-  fill: url("#img6");
 }
 
 main {
