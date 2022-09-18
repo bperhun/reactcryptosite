@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import classes from "../NewTraderPost/NewTraderPost.module.css";
 
 const NewTraderPost = (props) => {

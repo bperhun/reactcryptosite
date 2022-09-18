@@ -4,9 +4,7 @@ import PostMediumRisk from "./PostMediumRisk/PostMediumRisk";
 
 const MediumRiskSection = (props) => {
 
-    const postMediumRiskData = props.state.mediumRiskData.sort((a, b) => b.id - a.id);
-
-    const postMediumRiskElement = postMediumRiskData.map((item, index) => {
+    const postMediumRiskElement = props.data.map((item, index) => {
         return <PostMediumRisk key={index} h2={item.header} src={item.src} p1={item.p1} p2={item.p2} p3={item.p3} p4={item.p4} deadline={item.deadline} button_link={item.button_link} />;
     });
 

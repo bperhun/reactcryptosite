@@ -5,8 +5,10 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import MediumRiskSection from "./components/MediumRiskSection/MediumRiskSection";
+import MediumRiskSectionContainer from "./components/MediumRiskSection/MediumRiskSectionContainer";
 import NewTradersSection from "./components/NewTradersSection/NewTraderSection";
-import NoRiskSection from "./components/NoRiskSection/NoRiskSection";
+import NewTradersSectionContainer from "./components/NewTradersSection/NewTraderSectionContainer";
+import NoRiskSectionContainer from "./components/NoRiskSection/NoRiskSectionContainer";
 import './styles/App.css';
 
 const App = (props) => {
@@ -17,9 +19,9 @@ const App = (props) => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/noRiskProject" element={<NoRiskSection state={props.state} />} />
-          <Route path="/mediumRiskProject" element={<MediumRiskSection state={props.state} />} />
-          <Route path="/forNewTraders" element={<NewTradersSection state={props.state} addPost={props.addPost} updateText={props.updateText} />} />
+          <Route path="/noRiskProject" element={<NoRiskSectionContainer state={props.state} />} />
+          <Route path="/mediumRiskProject" element={<MediumRiskSectionContainer state={props.state} />} />
+          <Route path="/forNewTraders" element={<NewTradersSectionContainer state={props.state} />} />
           <Route path="/aboutUs" element={<AboutUs />} />
         </Routes>
         <Footer />

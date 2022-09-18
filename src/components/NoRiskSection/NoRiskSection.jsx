@@ -4,9 +4,7 @@ import PostNoRisk from "./PostNoRisk/PostNoRisk";
 
 const NoRiskSection = (props) => {
 
-    const postNoRiskData = props.state.noRiskData.sort((a, b) => b.id - a.id);
-
-    const postNoRiskElement = postNoRiskData.map((item, index) => {
+    const postNoRiskElement = props.data.map((item, index) => {
         return <PostNoRisk key={index} h2={item.header} src={item.src} p1={item.p1} p2={item.p2} p3={item.p3} p4={item.p4} deadline={item.deadline} button_link={item.button_link} />;
     });
 

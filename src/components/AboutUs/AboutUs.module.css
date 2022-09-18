@@ -58,7 +58,7 @@
     height: 95px;
     background: rgba(25, 184, 237, 1);
     margin-left: -50%;
-    margin-top: 34%;
+    margin-top: 26%;
     filter: blur(6px);
     animation: move-up 3.5s ease-in infinite alternate-reverse;
   }
@@ -127,6 +127,9 @@
       line-height: 67px;
       margin: 15% 2%;
     }
+    .noRisk__posts{
+      margin-bottom: 15%;
+     }
     .noRisk__posts p{
      margin-bottom: 15%;
     }
