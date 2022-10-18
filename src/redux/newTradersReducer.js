@@ -96,7 +96,7 @@ let initialState = {
 
 const newTradersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             const arr = {
                 id: 1,
                 header: state.templatesData.header,
@@ -124,9 +124,10 @@ const newTradersReducer = (state = initialState, action) => {
                 p20: state.templatesData.paragraph20,
                 p21: state.templatesData.paragraph21,
             }
-
-            state.data.push(arr);
-            state.templatesData = {
+            let stateCopy = { ...state };
+            stateCopy.data = [...state.data];
+            stateCopy.data.push(arr);
+            stateCopy.templatesData = {
                 header: '',
                 alt: '',
                 src: '',
@@ -152,10 +153,11 @@ const newTradersReducer = (state = initialState, action) => {
                 paragraph20: '',
                 paragraph21: '',
             };
-            return state;
-
-        case UPDATE_NEW_POST:
-            state.templatesData = {
+            return stateCopy;
+        }
+        case UPDATE_NEW_POST: {
+            let stateCopy = { ...state };
+            stateCopy.templatesData = {
                 header: action.header,
                 alt: action.alt,
                 src: action.src,
@@ -181,7 +183,8 @@ const newTradersReducer = (state = initialState, action) => {
                 paragraph20: action.p20,
                 paragraph21: action.p21,
             };
-            return state;
+            return stateCopy;
+        }
         default:
             return state;
     }

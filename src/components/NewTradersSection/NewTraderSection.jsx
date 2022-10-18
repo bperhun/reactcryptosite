@@ -5,7 +5,7 @@ import NewTraderPost from "./NewTraderPost/NewTraderPost";
 
 const NewTradersSection = (props) => {
 
-    const postNewTraderElement = props.state.data.map((item, index) => {
+    const postNewTraderElement = props.data.map((item, index) => {
 
         return <NewTraderPost key={index} id={item.id} header={item.header} src={item.src} alt={item.alt} p1={item.p1} p2={item.p2} p3={item.p3} p4={item.p4} p5={item.p5} p6={item.p6} p7={item.p7} p8={item.p8} p9={item.p9} p10={item.p10} p11={item.p11} p12={item.p12} p13={item.p13} p14={item.p14} p15={item.p15} p16={item.p16} p17={item.p17} p18={item.p18} p19={item.p19} p20={item.p20} p21={item.p21} />
     });
@@ -42,10 +42,10 @@ const NewTradersSection = (props) => {
                     <span className={classes.noRisk__circle}></span>
 
                     {postNewTraderElement}
-                    <textarea ref={header} onChange={updateHeader} value={props.state.templatesData.header} />
-                    <textarea ref={alt} onChange={updateHeader} value={props.state.templatesData.alt} />
-                    <textarea ref={src} onChange={updateHeader} value={props.state.templatesData.src} />
-                    <textarea ref={paragraph} onChange={updateHeader} value={props.state.templatesData.paragraph1} />
+                    <textarea ref={header} onChange={updateHeader} value={props.templatesData.header} />
+                    <textarea ref={alt} onChange={updateHeader} value={props.templatesData.alt} />
+                    <textarea ref={src} onChange={updateHeader} value={props.templatesData.src} />
+                    <textarea ref={paragraph} onChange={updateHeader} value={props.templatesData.paragraph1} />
                     <input type='submit' onClick={addHeader}></input>
                 </div>
             </div>

@@ -1,9 +1,14 @@
 import moment from "moment";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import clasess from '../Header/Header.module.css';
+import { logOutAction } from '../../redux/authReducer';
+import { useDispatch } from "react-redux";
 
 const Header = () => {
+    const isAuth = useSelector(state => state.auth.isAuth);
+
 
     const lineButton = React.useRef();
     const menuButton = React.useRef();
@@ -16,6 +21,12 @@ const Header = () => {
     function removeClassMenu() {
         lineButton.current.classList.remove(`${clasess.active}`);
         menuButton.current.classList.remove(`${clasess.active}`);
+    }
+
+    const dispatch = useDispatch();
+
+    function logOut() {
+        dispatch(logOutAction());
     }
 
     window.onload = function () {
@@ -54,6 +65,10 @@ const Header = () => {
                                 isActive ? clasess.active : ""}>Для новичков</NavLink></li>
                             <li onClick={removeClassMenu}><NavLink to='/aboutUs' className={({ isActive }) =>
                                 isActive ? clasess.active : ""}>О Нас</NavLink></li>
+                            {!isAuth && <li onClick={removeClassMenu}><NavLink to='/auth' className={({ isActive }) =>
+                                isActive ? clasess.active : ""}>Вход</NavLink></li>}
+                            {isAuth && <li onClick={removeClassMenu}><NavLink to='/' className={({ isActive }) =>
+                                isActive ? clasess.active : ""} onClick={logOut}>Выход</NavLink></li>}
                             <li><a href="https://t.me/+Wg2w6nlnbM9hYWY6" target="_blank">telegram</a></li>
                         </ul>
                     </div>

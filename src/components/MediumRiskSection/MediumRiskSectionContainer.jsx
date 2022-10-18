@@ -1,12 +1,20 @@
 import React from "react";
 import MediumRiskSection from "./MediumRiskSection";
+import { connect } from "react-redux";
 
-const MediumRiskSectionContainer = (props) => {
-    const postMediumRiskData = props.state.getState().mediumRiskData.data.sort((a, b) => b.id - a.id);
+let mapStateToProps = (state) => {
 
-    return (
-        <MediumRiskSection data={postMediumRiskData} />
-    );
+    return {
+        data: state.mediumRiskData.data,
+    }
 }
+let mapDispatchToProps = (dispatch) => {
+
+    return {
+
+    }
+}
+
+const MediumRiskSectionContainer = connect(mapStateToProps, mapDispatchToProps)(MediumRiskSection);
 
 export default MediumRiskSectionContainer; 

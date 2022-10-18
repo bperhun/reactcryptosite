@@ -1,23 +1,28 @@
 import React from "react";
 import NewTradersSection from "./NewTraderSection";
 import { addPostActionCreator, updatePostActionCreation } from "../../redux/newTradersReducer";
+import { connect } from "react-redux";
 
 
-const NewTradersSectionContainer = (props) => {
-    let state = props.state.getState().newTradersData;
+let mapStateToProps = (state) => {
 
-    const addPost = () => {
-        props.state.dispatch(addPostActionCreator());
+    return {
+        data: state.newTradersData.data,
+        templatesData: state.newTradersData.templatesData,
     }
+}
+let mapDispatchToProps = (dispatch) => {
 
-    const updatePost = (headerData, altData, srcData, paragraphData) => {
-        props.state.dispatch(updatePostActionCreation(headerData, altData, srcData, paragraphData));
+    return {
+        addPost: () => {
+            dispatch(addPostActionCreator());
+        },
+        updatePost: (headerData, altData, srcData, paragraphData) => {
+            dispatch(updatePostActionCreation(headerData, altData, srcData, paragraphData));
+        }
     }
-
-
-    return (
-        <NewTradersSection state={state} addPost={addPost} updatePost={updatePost} />
-    );
 }
 
-export default NewTradersSectionContainer;
+const NewTradersSectionContainer = connect(mapStateToProps, mapDispatchToProps)(NewTradersSection);
+
+export default NewTradersSectionContainer;    
