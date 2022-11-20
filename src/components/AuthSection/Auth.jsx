@@ -11,6 +11,7 @@ const Auth = (props) => {
 
     const loginn = React.useRef();
 
+
     const userName = React.useRef();
     const userPassword = React.useRef();
     const userEmail = React.useRef();
@@ -31,10 +32,6 @@ const Auth = (props) => {
         props.updateRegForm(userName.current.value, userPassword.current.value, userEmail.current.value);
     }
 
-    function registrUser() {
-        registration(email, name, password);
-    }
-
     function loginUser() {
         dispatch(login(loginEmail.current.value, loginPassword.current.value));
     }
@@ -50,7 +47,7 @@ const Auth = (props) => {
                             <input type="text" onChange={updateRegForm} ref={userName} placeholder="name" value={props.data.templatesData.name} />
                             <input type="password" onChange={updateRegForm} ref={userPassword} placeholder="password" value={props.data.templatesData.password} />
                             <input type="email" onChange={updateRegForm} ref={userEmail} placeholder="email address" value={props.data.templatesData.email} />
-                            <button onClick={registrUser}>create</button>
+                            <a onClick={() => registration(email, name, password)} className={classes.button}>create</a>
                             <p className={classes.message}>Already registered? <a href="#" onClick={openLogin}>Sign In</a></p>
                         </div>
                     </div>
@@ -58,7 +55,7 @@ const Auth = (props) => {
                         <div className={classes.loginForm}>
                             <input type="email" placeholder="email address" ref={loginEmail} />
                             <input type="password" placeholder="password" ref={loginPassword} />
-                            <button onClick={loginUser}>login</button>
+                            <div onClick={loginUser} className={classes.button}>login</div>
                             <p className={classes.message} >Not registered? <a href="#" onClick={openRegistr}>Create an account</a></p>
                         </div>
                     </div>

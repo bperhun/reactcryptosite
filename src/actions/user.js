@@ -1,9 +1,10 @@
 import axios from "axios";
 import { setUserAction } from "../redux/authReducer";
+import { API_URL } from "../config";
 
 export const registration = async (email, name, password) => {
     try {
-        const response = await axios.post('http://localhost:5001/api/auth/registration', {
+        const response = await axios.post(`${API_URL}api/auth/registration`, {
             email,
             name,
             password,
@@ -18,7 +19,7 @@ export const registration = async (email, name, password) => {
 export const login = (email, password) => {
     return async dispatch => {
         try {
-            const response = await axios.post('http://localhost:5001/api/auth/login', {
+            const response = await axios.post(`${API_URL}api/auth/login`, {
                 email,
                 password,
             });
@@ -33,7 +34,7 @@ export const login = (email, password) => {
 export const auth = () => {
     return async dispatch => {
         try {
-            const response = await axios.get(`http://localhost:5001/api/auth/auth`,
+            const response = await axios.get(`${API_URL}api/auth/auth`,
                 { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
             dispatch(setUserAction(response.data.user));
             localStorage.setItem('token', response.data.token);

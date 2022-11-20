@@ -1,5 +1,5 @@
 {
-    "serverPort": 5001,
+    "serverPort": 8080,
     "dbUrl": "mongodb+srv://admin:Bodya10v@cloud.bmglwyr.mongodb.net/cloud?retryWrites=true&w=majority",
     "secretKey": "mern-secret-key"
 }

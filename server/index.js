@@ -11,6 +11,7 @@ const corsMiddleware = require('./middleware/cors.middleware');
 
 app.use(corsMiddleware);
 app.use(express.json());
+app.use(express.static('static'));
 app.use("/api/postTrader", postTradersRouter);
 app.use("/api/auth", authRouter);
 
@@ -27,3 +28,4 @@ const start = async () => {
 }
 
 start();
+
